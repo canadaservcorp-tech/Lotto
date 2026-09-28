@@ -230,6 +230,7 @@ All scripts read `d/LOTTOMAX.csv` (unzipped from the source in section 2).
 | enhance4.py | Adjusts any lines to pass the 10 filters with minimum changes |
 | lottomax_optimal.py / optimal_lines.csv / optimal_comparison.csv | Era check (7/52), full 133,784,560 enumeration, greedy selection of N lines (overlap ≤ 1, ≥ 2 numbers > 31, exactly one consecutive pair, sum 150–230, ≥ 4 decades, no all-low / arithmetic series), Monte Carlo vs council-9 and spread-10 |
 | lottomax_randomness.py / randomness_tests.csv | Monte-Carlo randomness battery on the real draws, per era, with p-values |
+| lottomax_pdf_final.py / lotto_max_jeu_final.pdf | Printable ticket grids of optimal-10 (p.1) and sharing-10 (p.2) |
 | lottomax_sharing.py / sharing_lines.csv / sharing_comparison.csv | Popularity model → lines minimising expected jackpot co-winners (imports lottomax_optimal.py) |
 | LOTTO_MAX_HANDOFF.md | This file |
 
