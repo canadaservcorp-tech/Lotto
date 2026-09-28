@@ -11,3 +11,5 @@ Requirements: Python 3, pandas, numpy, openpyxl, reportlab.
 
 Optimal line selector: `cd scripts && python3 lottomax_optimal.py --n 10 --draws 1000000 --out ../results`
 (~1 min; writes `results/optimal_lines.csv` and `results/optimal_comparison.csv`).
+Randomness battery: `python3 lottomax_randomness.py --sims 4000 --out ../results` (seconds).
+Sharing-risk optimizer: `python3 lottomax_sharing.py --out ../results` (~1 min; run after lottomax_optimal.py).

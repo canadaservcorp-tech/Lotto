@@ -146,6 +146,23 @@ All 5 are official main-draw results, and **all 5 would have been eliminated** b
 
 Candidate pool with this profile: 33,306,688 of 133,784,560 (24.9%). Monte Carlo (1M draws, 10 lines + 30 Quick Picks, $60): win something 84.6%, money back 1.9%, avg non-jackpot return $17.02 — statistically identical to spread-10 (84.7% / 1.9% / $17.32); council-9 ($54): 73.6% / 3.5% / $15.59. As expected, the profile changes *which* lines are played, not the odds.
 
+### F. "Sharing-10" set (`lottomax_sharing.py`) — same profile + overlap ≤ 1, but chosen to minimise *expected co-winners* under a popularity model (birthday numbers 1–31 over-played, 32–52 under-played, pattern multipliers). Popularity weights are **assumptions**, not Loto-Québec data — edit `POIDS`/`PATRONS` at the top of the script if better data appears.
+1. 1 – 32 – 33 – 35 – 37 – 41 – 51
+2. 2 – 6 – 33 – 38 – 48 – 49 – 52
+3. 2 – 15 – 34 – 40 – 41 – 47 – 50
+4. 4 – 16 – 32 – 42 – 44 – 45 – 47
+5. 5 – 12 – 36 – 41 – 43 – 44 – 49
+6. 8 – 13 – 37 – 39 – 40 – 44 – 48
+7. 13 – 19 – 20 – 35 – 43 – 47 – 52
+8. 13 – 23 – 33 – 34 – 36 – 42 – 46
+9. 14 – 21 – 35 – 36 – 38 – 40 – 45
+10. 17 – 26 – 32 – 34 – 38 – 39 – 43
+
+With 30M lines sold/draw and 30% hand-picked: expected co-winners if a line hits = 0.165 (sharing-10) vs 0.197 (optimal-10), 0.196 (council-9), 0.204 (spread-10), 0.224 (Quick Pick) → expected jackpot share 85.8% vs ≈ 83.5%. **Win probability is identical for all sets**; this only changes how much you keep if you win.
+
+### G. Randomness battery (`lottomax_randomness.py`, 4,000 simulated histories per era) — `results/randomness_tests.csv`
+14 tests × 3 eras (number & bonus frequency, pair frequency, sum mean/sd, previous-draw repeats, max skip, lag-1 autocorrelation, consecutive pairs, odd/low counts, range, runs, and a predictive test: does first-half frequency predict second-half frequency?). Result: **1 of 42 tests below p = 0.05 (2.1 expected by chance), min p = 0.024, Bonferroni threshold 0.0012 → no exploitable bias.** Predictive correlation between halves: +0.09 / −0.06 / −0.04 (all noise). This closes the "is there a statistical edge" question.
+
 ## 7. Real chances (simulations, 300k–1M draws)
 | Plan | Cost | Win something | Money back or more | Avg small-prize return | Jackpot |
 |---|---|---|---|---|---|
@@ -212,6 +229,8 @@ All scripts read `d/LOTTOMAX.csv` (unzipped from the source in section 2).
 | lotto_max_combinaisons_restantes.pdf / combinaisons_restantes_199596.csv | All 199,596 lines |
 | enhance4.py | Adjusts any lines to pass the 10 filters with minimum changes |
 | lottomax_optimal.py / optimal_lines.csv / optimal_comparison.csv | Era check (7/52), full 133,784,560 enumeration, greedy selection of N lines (overlap ≤ 1, ≥ 2 numbers > 31, exactly one consecutive pair, sum 150–230, ≥ 4 decades, no all-low / arithmetic series), Monte Carlo vs council-9 and spread-10 |
+| lottomax_randomness.py / randomness_tests.csv | Monte-Carlo randomness battery on the real draws, per era, with p-values |
+| lottomax_sharing.py / sharing_lines.csv / sharing_comparison.csv | Popularity model → lines minimising expected jackpot co-winners (imports lottomax_optimal.py) |
 | LOTTO_MAX_HANDOFF.md | This file |
 
 ---
