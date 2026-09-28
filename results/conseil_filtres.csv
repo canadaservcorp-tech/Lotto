@@ -1,0 +1,6 @@
+Filtre,Lignes éliminées,% du pool,% des vrais tirages du pool éliminés
+Anniversaires : les 7 numéros ≤ 31,182,2.427730660090629e-05,0.0
+3+ numéros avec la même finale,1058264,0.14116373402583238,0.10256410256410256
+4+ numéros dans la même dizaine,46232,0.00616696944380824,0.02564102564102564
+Étendue < 30 (numéros trop groupés),163784,0.021847441672103493,0.07692307692307693
+Aucun numéro ≥ 45 ou aucun ≤ 8 (bords vides),2424954,0.32346896566535227,0.48717948717948717

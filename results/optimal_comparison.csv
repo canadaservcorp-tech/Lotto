@@ -1,0 +1,19 @@
+,optimal-10,conseil-9,étalées-10
+lignes,10.0,9.0,10.0
+numéros distincts,52.0,10.0,47.0
+chevauchement max,1.0,6.0,1.0
+hauts>31 ≥ 2,10.0,9.0,10.0
+exactement 1 paire consécutive,10.0,0.0,0.0
+somme 150-230,10.0,9.0,10.0
+dizaines ≥ 4,10.0,9.0,9.0
+pas toutes ≤ 31,10.0,9.0,10.0
+pas de série arithmétique,10.0,9.0,10.0
+coût $,60.0,54.0,60.0
+lignes jouées,40.0,36.0,40.0
+gagne qqch (choisies seules),0.390975,0.100831,0.383601
+gagne qqch (avec QP),0.845826,0.735908,0.846923
+remboursé (choisies seules),0.003962,0.016117,0.0041
+remboursé (avec QP),0.018854,0.034582,0.018711
+gains moyens/ligne choisie,0.0429172,0.042626333333333336,0.042814200000000004
+retour moyen $ (avec QP),17.01546,15.593175,82.31894
+retour moyen hors gros lot $,17.01546,15.593175,17.31894

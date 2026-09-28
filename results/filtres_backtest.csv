@@ -1,0 +1,10 @@
+Filtre,Min observé,Max observé,% combinaisons éliminées,% vrais tirages futurs éliminés
+Somme,90,294,0.005464333333333293,0.004201680672268893
+Nb impairs,0,7,0.0,0.0
+Nb bas (1-25),0,7,0.0,0.0
+Plus longue suite consécutive,1,4,0.00043999999999999595,0.0
+Nb dizaines différentes,2,5,8.333333333387927e-06,0.0
+Étendue (max-min),16,49,0.0018603333333333527,0.0
+Max même dernier chiffre,1,4,9.700000000001374e-05,0.0
+Plus grand écart entre 2 numéros,5,33,0.0026453333333333884,0.0
+TOUS LES FILTRES,,,0.00903799999999999,0.004201680672268893
